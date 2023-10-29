@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #FC616C;
+}
+
+.link:hover {
+    color: #FC616C;
+}
+
+.link {
+    font-size: 16px !important;
+}
+
+.active-language {
+    background-color: #FC616C;
+    color: #fff !important;
+    padding: 0px 5px !important;
+    border-radius: 10px;
+}
