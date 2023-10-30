@@ -19,17 +19,46 @@ import tren8 from '../../images/trending-8.png';
 import consultent from '../../images/consultent.png';
 import client from '../../images/client.png';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-// Import Swiper styles
-import 'swiper/css';
-
-import { Autoplay, Pagination, Navigation, FreeMode } from 'swiper/modules';
 
 import './Home.css';
+import Slider from 'react-slick';
 
 const Home = () => {
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 3500,
+        autoplaySpeed: 4500,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
+
     return (
         <>
             {/* banner */}
@@ -60,12 +89,12 @@ const Home = () => {
             </Carousel>
 
             {/* why-choose-us */}
-            <section className='col-lg-10 col-xxl-8 col-11 mx-auto my-5'>
+            <section className='col-lg-10 col-xxl-9 col-11 mx-auto py-5'>
                 <h2 className='text-center'>Why Choose Us</h2>
-                <div className='row g-5 justify-content-center align-items-center py-5'>
-                    <div className='col-lg-4 col-md-6 col-12 '>
-                        <div className='p-4 border shadow'>
-                            <img src={icon} alt="" srcSet="" />
+                <div className='row g-4 justify-content-center py-5 px-2 '>
+                    <div className='col-lg-4 col-md-6 col-12'>
+                        <div className='p-4 border choose-card mb-1'>
+                            <img src={icon1} alt="" srcSet="" />
                             <div className='mt-4'>
                                 <h5 className='fw-semibold'>Best Materials</h5>
                                 <p>Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
@@ -73,7 +102,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className=' col-lg-4 col-md-6 col-12 '>
-                        <div className='p-4 border shadow'>
+                        <div className='p-4 border choose-card mb-1'>
                             <img src={icon} alt="" srcSet="" />
                             <div className='mt-4'>
                                 <h5 className='fw-semibold'>Best Materials</h5>
@@ -81,8 +110,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=' col-lg-4 col-md-6 col-12'>
-                        <div className='p-4 border shadow'>
+                    <div className='col-lg-4 col-md-6 col-12'>
+                        <div className='p-4 border choose-card mb-1'>
                             <img src={icon} alt="" srcSet="" />
                             <div className='mt-4'>
                                 <h5 className='fw-semibold'>Best Materials</h5>
@@ -94,7 +123,7 @@ const Home = () => {
             </section>
 
             {/* ABOUT  */}
-            <section className="about-section overflow-hidden my-5">
+            <section className="about-section overflow-hidden my-5 bg-info">
                 <div className="about-text-container d-flex align-items-center">
                     <div className="col-lg-10 col-11 mx-auto about-text">
                         <h1>ABOUT</h1>
@@ -424,125 +453,74 @@ const Home = () => {
             <section className="mb-5">
                 <div className="container">
                     <h2 className="text-center py-5 client-say-title">What our clients say about us.</h2>
-                    <>
-                        <Swiper
-                            autoplay={{
-                                delay: 1500,
-                                disableOnInteraction: false,
-                                pauseOnMouseEnter: false,
-                            }}
-                            loop={true}
-                            slidesPerView={3}
-                            spaceBetween={30}
-                            centeredSlides={true}
-                            freeMode={true}
-                            modules={[Autoplay, Pagination, Navigation, FreeMode]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
+
+                    <Slider {...settings} className=' py-3 overflow-hidden px-3'>
+                        <div className=''>
+                            <div className="card client-card ">
+                                <img src={client} className="card-img-top p-4" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="text-center">James Pattinson</h5>
+                                    <div className="text-center  my-3 star-icon">
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
                                     </div>
+                                    <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
                                 </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
+                            </div>
+                        </div>
+                        <div className=''>
+                            <div className="card client-card ">
+                                <img src={client} className="card-img-top p-4" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="text-center">James Pattinson</h5>
+                                    <div className="text-center  my-3 star-icon">
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
                                     </div>
+                                    <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
                                 </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
+                            </div>
+                        </div>
+                        <div className=''>
+                            <div className="card client-card ">
+                                <img src={client} className="card-img-top p-4" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="text-center">James Pattinson</h5>
+                                    <div className="text-center  my-3 star-icon">
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
                                     </div>
+                                    <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
                                 </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
+                            </div>
+                        </div>
+                        <div className=''>
+                            <div className="card client-card ">
+                                <img src={client} className="card-img-top p-4" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="text-center">James Pattinson</h5>
+                                    <div className="text-center  my-3 star-icon">
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
+                                        <i className="fa-sharp fa-solid fa-star"></i>
                                     </div>
+                                    <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
                                 </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card client-card ">
-                                    <img src={client} className="card-img-top p-4" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="text-center">James Pattinson</h5>
-                                        <div className="text-center  my-3 star-icon">
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                            <i className="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p className="card-text">“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-                                            tortor donec ipsum consequat semper consequat adipiscing ultrices.”.</p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
-                    </>
+                            </div>
+                        </div>
+                    </Slider>
+
 
                     <button type="button" className="btn see-more-btn  my-5  d-block mx-auto">See More</button>
                 </div>

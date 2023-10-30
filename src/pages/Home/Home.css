@@ -8,6 +8,9 @@
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
 
 /* font-family: 'Inter', sans-serif;
 font-family: 'Montaga', serif;
@@ -29,8 +32,15 @@ font-family: 'Work Sans', sans-serif; */
 }
 
 .choose-card {
-    border: 1.4px solid #E0E3EB !important;
+    /* border: 1.4px solid #E0E3EB !important; */
     background-color: #FFFFFF !important;
+}
+
+.choose-card:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.16), 
+                0 8px 8px rgba(0,0,0,0.20);
 }
 
 .choose-card .card-title {
