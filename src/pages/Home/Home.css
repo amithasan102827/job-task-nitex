@@ -1,26 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Montaga&family=Montserrat&family=Nunito&family=Poppins:wght@500;600&family=Roboto:wght@500;700&family=Work+Sans:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 }
 
-/* NAVBAR */
-.navbar {
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Montaga', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+
+
+/* BANNER */
+/* .banner {
+    margin-top: 138px;
+} */
+
+/* WHY-CHOOSE-US */
+.choose-us-section {
+    min-height: 500px;
+}
+
+.choose-card {
+    border: 1.4px solid #E0E3EB !important;
+    background-color: #FFFFFF !important;
+}
+
+.choose-card .card-title {
+    font-weight: 700;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.choose-card .card-text {
+    color: #858EAD;
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+/* ABOUT */
+.about-section {
+    background-image: url('../../images/about.png');
+    min-height: 611px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.about-text-container {
+    background: rgba(252, 97, 108, 0.92);
+    width: 50%;
+    min-height: 611px;
+    float: right;
+    /* opacity: 0.8; */
+}
+
+.about-text h1 {
+    color: #2D3291;
+    font-weight: 700;
+}
+
+.about-text p {
+    color: #FFFFFF;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.know-more-btn {
+    background: #2D3291 !important;
+    color: #FFFFFF !important;
+    border-radius: 15px !important;
+    width: 160px;
+    height: 48px;
+    font-weight: 600 !important;
+}
+
+.know-more-btn:hover {
+    background-color: #6165ae !important;
+}
+
+
+/* WE SPECIALIZE IN */
+.specialize-section {
+    background-color: #FFFFFF;
+}
+
+
+.specialize-card {
+    background: #FC616C;
+    box-shadow: 0px 30px 40px rgba(252, 97, 108, 0.35);
+    border-radius: 15px;
+    width: 202px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.specialize-card .card-body h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+
+/* Remarkable Features */
+.remarkable-features {
+    background: rgba(128, 240, 255, 0.1);
+    min-height: 812px;
+}
+
+.vertical-line {
     background-color: #FC616C;
 }
 
-.link:hover {
-    color: #FC616C;
+.features-text {
+    font-family: 'Work Sans', sans-serif;
+    text-align: justify;
 }
 
-.link {
-    font-size: 16px !important;
+
+/* TRENDING NOWADAYS */
+.trending-section {
+    background: linear-gradient(180deg, #190594 0%, rgba(35, 39, 124, 0.65) 100%);
 }
 
-.active-language {
-    background-color: #FC616C;
-    color: #fff !important;
-    padding: 0px 5px !important;
-    border-radius: 10px;
+.trending-card img {
+    width: 257px;
+    height: 374px;
+}
+
+.show-more-btn {
+    background-color: #020769 !important;
+    color: #FFFFFF !important;
+}
+
+.show-more-btn:hover {
+    background-color: #2D3291 !important;
+}
+
+
+/* BOOK FREE CONSULTATION */
+.consaltation-ima-container img {
+    width: 601px;
+    height: 676px;
+}
+
+.consaltation-text {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* APPOINTMENT-SECTION */
+.appointment-section {
+    background: #FC616C;
+    min-height: 397px;
+}
+
+.appointment-text {
+    text-align: justify;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.appointment-text-2 span {
+    text-align: justify;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.appointment-btn {
+    background-color: #2D3291 !important;
+}
+
+.appointment-btn:hover {
+    background-color: #5056c3 !important;
+}
+
+
+/* What our clients say about us */
+.client-card {
+    border: 1px solid #000000 !important;
+    border-radius: 20px !important;
+    width: 306px;
+    height: 443px;
+    margin: auto;
+}
+
+.client-card img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.client-card .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.client-card .card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.star-icon {
+    color: #FF7A00;
+}
+
+.client-say-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.see-more-btn {
+    background-color: #2D3291 !important;
+    color: #FFFFFF !important;
+    padding: 10px 40px !important;
+}
+
+.see-more-btn:hover {
+    background-color: #464cbd !important;
+}
+
+
+
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 480px) {
+
+    /* ABOUT */
+    .about-text-container {
+        background: rgba(252, 97, 108, 0.92);
+        width: 100%;
+        min-height: 711px;
+        float: right;
+        opacity: 0.8;
+    }
 }

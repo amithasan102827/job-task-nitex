@@ -1,0 +1,24 @@
+/* FOOTER */
+.footer-container {
+    background: #2D3291;
+    min-height: 369px;
+}
+
+.quick-links h6 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.quick-links h5 {
+    font-weight: 600;
+}
+
+.quick-links h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-icon a {
+    text-decoration: none;
+    color: #fff;
+}
