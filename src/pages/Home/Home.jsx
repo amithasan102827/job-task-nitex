@@ -25,6 +25,7 @@ import Slider from 'react-slick';
 
 const Home = () => {
 
+
     const settings = {
         dots: false,
         infinite: true,
@@ -62,31 +63,24 @@ const Home = () => {
     return (
         <>
             {/* banner */}
-            <Carousel slide={false}>
-                <Carousel.Item>
-                    <img className='img-fluid w-100' src={banner1} alt="" srcSet="" />
-                    <Carousel.Caption>
-                        <h3 className='title'>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className='img-fluid w-100' src={banner2} alt="" srcSet="" />
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className='img-fluid w-100' src={banner1} alt="" srcSet="" />
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <section id='home'>
+                <Carousel className='overflow-hidden'>
+                    <Carousel.Item interval={2000}>
+                        <img className='img-fluid w-100' src={banner1} alt="" srcSet="" />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={2500}>
+                        <img className='img-fluid w-100' src={banner2} alt="" srcSet="" />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </section>
 
             {/* why-choose-us */}
             <section className='col-lg-10 col-xxl-9 col-11 mx-auto py-5'>
@@ -123,7 +117,7 @@ const Home = () => {
             </section>
 
             {/* ABOUT  */}
-            <section className="about-section overflow-hidden my-5 bg-info">
+            <section className="about-section overflow-hidden my-5 bg-info" id='about'>
                 <div className="about-text-container d-flex align-items-center">
                     <div className="col-lg-10 col-11 mx-auto about-text">
                         <h1>ABOUT</h1>
@@ -141,7 +135,7 @@ const Home = () => {
 
 
             {/* WE SPECIALIZE IN */}
-            <section className="specialize-section mb-5">
+            <section className="specialize-section mb-5" id='service'>
                 <div className="container specialize-container">
                     <h2 className="text-center mb-5">We Specialize in</h2>
                     <div className="row row-cols-1 row-cols-lg-4 row-cols-md-3 g-4">
@@ -305,7 +299,7 @@ const Home = () => {
             </section>
 
             {/* TRENDING NOWADAYS */}
-            <section className="trending-section pb-5 mb-5">
+            <section className="trending-section pb-5 mb-5" id='product'>
                 <div className="container">
                     <h2 className="text-light text-center py-5">TRENDING NOWADAYS</h2>
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-md-0 g-4 ">
@@ -525,7 +519,6 @@ const Home = () => {
                     <button type="button" className="btn see-more-btn  my-5  d-block mx-auto">See More</button>
                 </div>
             </section>
-
 
         </>
     )

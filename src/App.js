@@ -2,14 +2,13 @@
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <main>
-      <Header/>
+    <main className='overflow-hidden '>
+      <Header />
       <Home />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

@@ -1,34 +1,21 @@
 import React from 'react'
-import { Button, Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import './Header.css'
-
 
 const Header = () => {
 
     return (
-        <>
-            <Navbar expand="lg" className="bg-light shadow-lg">
-                <Container>
-                    <Navbar.Brand className='fs-2' href="#">NITEX</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="ms-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
-                        >
-                            <Nav.Link className='link' href="#action1">Home</Nav.Link>
-                            <Nav.Link className='link' href="#action2">About</Nav.Link>
-                            <Nav.Link className='link' href="#action2">Service</Nav.Link>
-                            <Nav.Link className='link' href="#action2">Testimonial</Nav.Link>
-                            <Nav.Link className='link' href="#action2">Contact Us</Nav.Link>
-                            <Nav.Link className='link' href="#action2">Consultency</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </>
+        <nav className="navbar row">
+            <div className="logo mb-md-0 mb-2 col-md-6">NITEX</div>
+            <div className="menu pb-md-0 pb-2 col-md-6">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#product">Product</a></li>
+            </div>
+        </nav>
     )
 }
 
 export default Header
+
+
